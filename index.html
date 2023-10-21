@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link"></a>
     <header>
     <img src="images/juliana.jpeg" alt="Paco Diaz" class="header-img"></img>
     <h1 class="header">Juliana Gomez</h1>
@@ -24,7 +25,8 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="main">
+    
     <section>
       <h2>Acerca de</h2>
      <p class="intro"> Hola! Soy Juliana 👋 Soy Colombo-Canadiense, amo los gatos y tambien crear
@@ -39,17 +41,23 @@
         <li>
           <a href="https://twitter.com/gmzjuliana" target="_blank"
             ><img src="images/twitter.png" alt="twitter"
-          /></a>
+          />
+          <p class="social-link-text">twitter</p>
+        </a>
         </li>
         <li>
           <a href="https://github.com/gmzjuliana" target="_blank"
             ><img src="images/github-logo.png" alt="github"
-          /></a>
+          />
+          <p class="social-link-text">github</p>
+        </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
             ><img src="images/linkedin.png" alt="linkedin"
-          /></a>
+          />
+          <p class="social-link-text">linkedin</p>
+        </a>
         </li>
       </ul>
     </section>
@@ -57,17 +65,17 @@
   <section>
     <h2 class="header">Mis Proyectos</h2>
     <div class="carousel">
-      <div class="arrow arrow-left"></div>
+      <div class="arrow arrow-left" aria-label="backward button"></div>
       <div class="window">
         <ul class="project-container">
           <li ><button><img src="images/project1.png" alt="" class="project project1"></button></li>
           <li ><button><img src="images/project2.png" alt="" class="project project2"></button></li>
           <li ><button><img src="images/project3.png" alt="" class="project project3"></button></li>
-          <li ><button><img src="images/project4.png" alt="" class="project project4"></button></li>
-          <li ><button><img src="images/project5.png" alt="" class="project project5"></button></li>
+          <li  aria-hidden="true"><button><img src="images/project4.png"  alt="" class="project project4"></button></li>
+          <li aria-hidden="true" ><button><img src="images/project5.png"   alt="" class="project project5"></button></li>
         </ul>
       </div>
-      <div class="arrow arrow-right"></div>
+      <div class="arrow arrow-right" aria-label="forward button"></div>
     </div>
   </section>
   </main>
@@ -75,9 +83,9 @@
     <footer class="contact-section">
       <h2 class="header">Contacto</h2>
       <form class="form-container">
-        Nombre<input type="text" /> <br />
-        Correo<input type="text" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
+        <p class="form-label"> Nombre</p><input type="text" aria-label="imput name" /> <br />
+        <p class="form-label"> Correo</p><input type="text" aria-label="imput correo" /> <br />
+        <div class="message-input, form-label"><p>Mensaje</p><input type="text" /> <br /></div>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
