@@ -70,8 +70,9 @@ body, header, section {
 
 }
 
-.skip-link:focus, .skip-link:active{
-background: var(--verde)
+.skip-link:focus, 
+.skip-link:active{
+background: var(--verde);
 border-radius: 5px;
 color: var(--gris-oscuro);
 font-family: var(--secondary-font);
@@ -79,6 +80,9 @@ height: auto;
 margin: 16px 0px;
 padding: 8px;
 text-decoration: none;
+border: 5px solid var(--gris-oscuro);
+outline: 3px outline var(--verde)
+
 }
 
 .subtitle {
@@ -155,7 +159,7 @@ color: var(--gris-oscuro)
   display: flex;
   justify-content: space-around;
   margin: 32px auto 0;
-  width: 20%;
+  
 }
 
 .carousel {
@@ -185,7 +189,7 @@ color: var(--gris-oscuro)
   border: none;
 }
 
-.project {
+.project-img {
   border-radius: 5px;
   border: 2px solid #000;
   display: inline-block;
@@ -235,6 +239,10 @@ color: var(--gris-oscuro)
   border-radius: 50%;
 }
 
+
+.arrow:focus{
+  outline: 3px solid var(--verde)
+}
 .contact-section {
   align-items: center;
   background-color: var(--gris-oscuro);
@@ -255,15 +263,20 @@ color: var(--gris-oscuro)
 }
 
 input {
-  outline: none;
+  
   width: 100%;
 }
 
-.send-button {
+input:focus{
+  outline: 3px solid var(--verde);
+  padding: 8px;
+}
+
+.send-button, .modal-button {
   align-items: center;
   background-color: var(--verde);
   border-radius: 5px;
-  color: white;
+  color: var(--gris-oscuro);
   font-family: var(--secondary-font);
   display: flex;
   height: 50px;
@@ -272,6 +285,7 @@ input {
   width: 150px;
   margin-left: auto;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .notification {
@@ -300,6 +314,16 @@ input {
   width: 100vw;
 }
 
+.send-button:focus,
+.modal-button:focus {
+  border: 5px solid var(--gris-oscuro)
+  outline: 3px solid var(--verde)
+}
+
+#modal-header{
+  outline: 3px solid var(--verde);
+}
+
 .modal {
   align-items: center;
   background-color: var(--gris-oscuro);
@@ -310,8 +334,9 @@ input {
   height: 700px;
   justify-content: center;
   position: fixed;
-  top: 15%;
-  width: 700px;
+  top: 5%;
+  width: 600px;
+  padding: 56px;
 }
 
 .modal-project-image {
