@@ -314,6 +314,11 @@ input:focus{
   width: 100vw;
 }
 
+#name-error {
+  color: var(--blanco);
+  font-family: var(--secondary-font)
+}
+
 .send-button:focus,
 .modal-button:focus {
   border: 5px solid var(--gris-oscuro)
